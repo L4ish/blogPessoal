@@ -1,82 +1,29 @@
 function Home() {
     return (
         <>
-            <div
-                style={{
-                    backgroundColor: "chocolate", 
-                    display: "flex",
-                    justifyContent: "center"
-                }}
-            >
-                <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr", 
-                        color: "white",
-                        width: "100%",
-                        maxWidth: "1280px", 
-                    }}
-                >
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "1rem", 
-                            alignItems: "center",
-                            justifyContent: "center",
-                            paddingTop: "1rem", 
-                            paddingBottom: "1rem"
-                        }}
-                    >
-                        <h2
-                            style={{
-                                fontSize: "3rem", 
-                                fontWeight: "bold"
-                            }}
-                        >
+            <div className="bg-orange-800 flex justify-center pt-5 pb-5">
+                <div className="container grid grid-cols-2 text-white">
+                    <div className="flex flex-col gap-4 items-center justify-center py-4">
+                        <h2 className="text-5xl font-bold">
                             Seja Bem Vinde!
                         </h2>
 
-                        <p
-                            style={{
-                                fontSize: "1.25rem" 
-                            }}
-                        >
+                        <p className="text-x1">
                             Café: o verdadeiro framework da produtividade.
                         </p>
 
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-around",
-                                gap: "1rem"
-                            }}
-                        >
-                            <div
-                                style={{
-                                    borderRadius: "0.5rem",
-                                    color: "white",
-                                    border: "2px solid white",
-                                    padding: "0.5rem 1rem"
-                                }}
-                            >
-                                Escolha o seu
+                        <div className="flex justify-around gap-4">
+                            <div className="text-white border-white border-solid border-2 rounded-full py-2 px-4">
+                                Nova publicação
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "center"
-                        }}
-                    >
+                    <div className="flex justify-center">
                         <img
                             src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
                             alt="Imagem Página Home"
-                            style={{
-                                width: "66%"
-                            }}
+                            className="w-4/7 rounded-full"
                         />
                     </div>
                 </div>
