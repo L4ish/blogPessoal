@@ -1,7 +1,7 @@
 function Home() {
     return (
         <>
-            <div className="bg-orange-800 flex justify-center pt-5 pb-5">
+            <div className="bg-orange-800 flex justify-center pt-5 pb-5 font-turret">
                 <div className="container grid grid-cols-2 text-white">
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className="text-5xl font-bold">
