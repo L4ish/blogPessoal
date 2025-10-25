@@ -4,13 +4,13 @@ function Navbar() {
     return (
         <>
             <div className="w-full flex justify-center py-4 bg-orange-400 text-white">
-                <div className="container flex justify-between text-xl mx-8 font-turret">
+                <div className="container flex justify-between text-xl mx-8 font-turret font-bold">
                     <Link to="/home" className=" text-2xl hover:text-3xl">Blog Pessoal - Sr. Café</Link>
                     <div>
-                        Publicações
-                        Assuntos
-                        Cadastrar assunto
-                        Perfil
+                        Publicações | 
+                        Assuntos |
+                        Cadastrar assunto |
+                        Perfil |
                         Sair
                     </div>
 
