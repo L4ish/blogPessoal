@@ -20,8 +20,9 @@ function Navbar() {
                     <Link to="/home" className=" text-2xl hover:text-3xl">Blog Pessoal - Sr. Café</Link>
                     <div>
                         Publicações | 
-                        Assuntos |
-                        Cadastrar assunto |
+                        <Link to='/temas' className="hover:underline"> Assuntos | </Link>
+                        <Link to='/cadastrartema' className="hover:underline"> Cadastrar assunto | </Link>
+                        
                         Perfil |
                         <Link to='' onClick={logout} className="hover:underline"> Sair</Link>
                     </div>

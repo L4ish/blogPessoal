@@ -5,7 +5,7 @@ function Footer() {
     return (
         <>
             <div className="flex justify-center bg-orange-400 text-white" >
-                <div className="container flex flex-col items-center py-2 font-turret">
+                <div className="container flex flex-col items-center py-4 font-turret">
                     <p className="text-2xl">
                         Sr.Café | Copyright {data}
 
