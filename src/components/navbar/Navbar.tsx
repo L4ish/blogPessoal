@@ -19,7 +19,7 @@ function Navbar() {
                 <div className="container flex justify-between text-xl mx-8 font-turret font-bold">
                     <Link to="/home" className=" text-2xl hover:text-3xl">Blog Pessoal - Sr. Café</Link>
                     <div>
-                        Publicações | 
+                        <Link to='/postagens' className="hover:underline"> Publicações | </Link>
                         <Link to='/temas' className="hover:underline"> Assuntos | </Link>
                         <Link to='/cadastrartema' className="hover:underline"> Cadastrar assunto | </Link>
                         
