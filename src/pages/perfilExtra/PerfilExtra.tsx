@@ -3,13 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import type Usuario from "../../models/Usuario";
 import { buscar } from "../../services/Service";
+import { ToastAlerta } from "../../utils/ToastifyAlert";
 
 function PerfilExtra() {
-  // para essa tela de perfil, iremos trabalhar pegando o ID do usuario da URL do navegador, para conseguir fazer um get do usuario
+  // pega o ID do usuario da URL do navegador, para conseguir fazer um get do usuario
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  // trazendo a context, pra poder pegar o token, sem ele, não rola de fazer o GET
+  // trazendo a context, pra poder pegar o token, sem ele, não conseguimos fazer o GET
   const { usuario } = useContext(AuthContext);
   // estado onde iremos guardar o usuário que está vindo do backend
   const [usuarioLogado, setUsuarioLogado] = useState<Usuario>({} as Usuario);
@@ -30,7 +31,7 @@ function PerfilExtra() {
       );
     } catch (error: any) {
       if (error.toString().includes("401")) {
-        alert("Tem q estar logado");
+        ToastAlerta(" Você precisa estar logado.", "info");
         navigate("/");
       }
     }

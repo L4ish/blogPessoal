@@ -5,6 +5,7 @@ import type Postagem from "../../../models/Postagem";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 import { ClipLoader } from "react-spinners";
+import { ToastAlerta } from "../../../utils/ToastifyAlert";
 
 function FormPostagem() {
   const navigate = useNavigate()
@@ -60,7 +61,7 @@ function FormPostagem() {
 
   useEffect(() => {
     if(token === '') {
-      alert('Você precisa estar logado!')
+      ToastAlerta('Você precisa estar logado!', "info")
       navigate('/')
     }
   }, [token])
@@ -105,13 +106,13 @@ function FormPostagem() {
           }
         })
 
-        alert('Publicação atualizada com sucesso.')
+        ToastAlerta('Publicação atualizada com sucesso.', "sucesso")
 
       } catch (error: any) {
         if (error.toString().includes('401')) {
           handleLogout()
         } else {
-          alert('Erro ao atualizar a publicação.')
+          ToastAlerta('Erro ao atualizar a publicação.', "erro")
         }
       }
     } else {
@@ -122,13 +123,13 @@ function FormPostagem() {
           }
         })
 
-        alert('Publicação cadastrada com sucesso.')
+        ToastAlerta('Publicação cadastrada com sucesso.', "sucesso")
 
       } catch(error: any) {
         if(error.toString().includes('401')) {
           handleLogout()
         } else {
-          alert('Erro ao cadastrar publicação.')
+          ToastAlerta('Erro ao cadastrar publicação.', "erro")
         }
       }
     }
