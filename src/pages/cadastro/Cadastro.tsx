@@ -149,7 +149,7 @@ function Cadastro() {
           <div className="flex justify-around w-full gap-8">
             <button
               type="reset"
-              className="rounded-full text-white bg-orange-800 hover:bg-orange-400 w-1/2 py-2"
+              className="rounded-full text-white bg-red-700 hover:bg-red-600 w-1/2 py-2"
               onClick={retornar}
             >
               Cancelar
